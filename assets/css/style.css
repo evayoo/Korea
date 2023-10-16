@@ -1,0 +1,191 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the navigation bar */
+.navbar, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Style the logo */
+.logo, footer {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Style the burger menu for small screens */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .burger-menu {
+      display: flex;
+  }
+}
+
+p {
+  margin-left: 10%;
+}
+
+body {
+    background-image: url("korea.jpg");
+  }
+
+ /* .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }*/
+
+  
+  .wrapper {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 100px;
+    font-size: 150%;
+    background-size: cover;
+    width: 100%;
+  }
+
+  #aa {
+    background-image: url(/assets/images/bibim.jpg);
+  }
+
+  #bb {
+    background-image: url(/assets/images/hangul1.jpg);
+  }
+
+  #cc {
+    background-image: url(/assets/images/hanbok.jpg);
+  }
+  
+  #dd {
+    background-image: url(/assets/images/anma.jpg);
+  }
+
+  #ee {
+    background-image: url(/assets/images/seoul.jpg);
+  }
+
+  #ff {
+    background-image: url(/assets/images/cycle.jpg);
+  }
+
+  #gg {
+    background-image: url(/assets/images/wedding.jpg);
+  }
+
+  #hh {
+    background-image: url(/assets/images/market.jpg);
+  }
+
+  #ii {
+    background-image: url(/assets/images/feed.jpg);
+  }
+
+/*.header,
+.footer {
+  background-color: #999;
+}
+*/
+
+ul {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.feed li {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  font-size: 2rem;
+  align-items: center;
+  height: 300px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  justify-content: center;
+  transition: transform 0.5s ease 0s;
+  background-color: bisque;
+}
+
+.feed a {
+  left: 45vw;
+  margin: 10px;
+  cursor: pointer;
+}
+
+section {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
