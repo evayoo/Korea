@@ -1,8 +1,8 @@
 const koreans = [
-    { name: 'Learn Hangul, Korean alphabet', detail: 'We will learn how to read and write Korean', price: '50 CHF/hour', imgSrc: '/assets/images/bibim.jpg'},
-    { name: 'Learn Korean language (any level)', detail: 'You will learn how to speak Korean elegantly', price: '50 CHF/hour', imgSrc: '/assets/images/kimbap.jpg' },
-    { name: 'Learn Korean with K-pop', detail: 'You can bring any K-pop song you like', price: '50 CHF/hour', imgSrc: '/assets/images/kimchi.jpg' },
-    { name: 'Learn Korean with K-drama', detail: 'You can bring any K-drama/Korean film you like', price: '50 CHF/hour', imgSrc: '/assets/images/kimchijeon.jpg' },
+    { name: 'Learn Hangul, Korean alphabet', detail: 'We will learn how to read and write Korean', price: '50 CHF/hour', imgSrc: '/assets/images/hangul1.jpg'},
+    { name: 'Learn Korean language (any level)', detail: 'You will learn how to speak Korean elegantly', price: '50 CHF/hour', imgSrc: '/assets/images/hangul.jpg' },
+    { name: 'Learn Korean with K-pop', detail: 'You can bring any K-pop song you like', price: '50 CHF/hour', imgSrc: '/assets/images/kpop.jpg' },
+    { name: 'Learn Korean with K-drama', detail: 'You can bring any K-drama/Korean film you like', price: '50 CHF/hour', imgSrc: '/assets/images/drama.jpg' },
     ];
 
 const koreanContainer = document.getElementById('korean-container');
@@ -15,6 +15,7 @@ koreans.forEach(function (korean) {
             </div>
             <div class="info d-none">
                     <h5 class="card-title">${korean.name}</h5>
+                    <div class="card-text mt-4"><strong>Detail:</strong> ${korean.detail}</div>
                     <div class="card-text"><strong>Price:</strong> ${korean.price}</div>
             </div>
          </div>

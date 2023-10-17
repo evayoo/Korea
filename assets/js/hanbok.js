@@ -1,8 +1,8 @@
 const hanboks = [
-    { name: 'Modern hanbok', price: '50 CHF/hour', imgSrc: '../assets/images/modern.jpg'},
-    { name: 'Summer hanbok', price: '40 CHF/hour', imgSrc: '../assets/images/dress.jpg' },
-    { name: 'Summer blouse', price: '30 CHF/hour', imgSrc: '../assets/images/blouse.jpg' },
-    { name: 'Couple hanbok', price: '100 CHF/hour', imgSrc: '../assets/images/hanbok3.jpg' },
+    { name: 'Modern hanbok', price: '50 CHF/hour', imgSrc: '/assets/images/modern.jpeg'},
+    { name: 'Summer hanbok', price: '40 CHF/hour', imgSrc: '/assets/images/dress.jpeg' },
+    { name: 'Summer blouse', price: '30 CHF/hour', imgSrc: '/assets/images/blouse.jpeg' },
+    { name: 'Couple hanbok', price: '100 CHF/hour', imgSrc: '/assets/images/hanbok3.jpg' },
     ];
 
 const hanbokContainer = document.getElementById('hanbok-container');

@@ -10,6 +10,10 @@
   display: flex;
   background-color: #333;
   padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  
+
 }
 
 /* Style the logo */
@@ -23,6 +27,7 @@
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 
 .nav-links li {
@@ -72,6 +77,7 @@
 
 p {
   margin-left: 10%;
+  margin-right: 10%;
 }
 
 body {
@@ -91,6 +97,7 @@ body {
     margin: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 50px;
     background-color: #fff;
     justify-content: center;
@@ -100,12 +107,24 @@ body {
   .box {
     background-color: #444;
     color: #fff;
-    max-width: 300px;
+    height: 100%;
     border-radius: 10px;
     padding: 100px;
     font-size: 150%;
     background-size: cover;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box a{
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
   }
 
   #aa {

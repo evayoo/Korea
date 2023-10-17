@@ -1,7 +1,7 @@
 const travels = [
-    { name: 'Set up Korea travel plan', detail: 'I can help you set up a customized Korea trip', price: '50 CHF/hour', imgSrc: '../assets/images/modern.jpg'},
-    { name: 'Hire a Korean guide', detail: 'English speaking guide will acompany you', price: '100 CHF/day', imgSrc: '../assets/images/dress.jpg' },
-    { name: 'Hire a driver', detail: 'A professional driver will acompany you with a SUV', price: '100 CHF/day', imgSrc: '../assets/images/blouse.jpg' },
+    { name: 'Set up Korea travel plan', detail: 'I can help you set up a customized Korea trip', price: '50 CHF/hour', imgSrc: '/assets/images/korea.jpg'},
+    { name: 'Hire a Korean guide', detail: 'English speaking guide will acompany you', price: '100 CHF/day', imgSrc: '/assets/images/guide.jpg' },
+    { name: 'Hire a driver', detail: 'A professional driver will acompany you with a SUV', price: '100 CHF/day', imgSrc: '/assets/images/driver.jpg' },
     ];
 
 const travelContainer = document.getElementById('travel-container');
@@ -14,6 +14,7 @@ travels.forEach(function (travel) {
             </div>
             <div class="info d-none">
                     <h5 class="card-title">${travel.name}</h5>
+                    <div class="card-text mt-4"><strong>Detail:</strong> ${travel.detail}</div>
                     <div class="card-text"><strong>Price:</strong> ${travel.price}</div>
             </div>
          </div>
