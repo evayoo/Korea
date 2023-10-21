@@ -8,7 +8,7 @@
 /* Style the navigation bar */
 .navbar, footer {
   display: flex;
-  background-color: #333;
+  background-color: #f3f3eb;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -16,8 +16,12 @@
 
 }
 
+.logo {
+  height: 100px;
+}
+
 /* Style the logo */
-.logo, footer {
+.footer {
   color: #fff;
   font-size: 24px;
   font-weight: bold;
@@ -36,7 +40,9 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: black;
+  font-family: "Unica One", sans-serif;
+  font-size: 25px;
 }
 
 /* Style the burger menu for small screens */
@@ -78,10 +84,12 @@
 p {
   margin-left: 10%;
   margin-right: 10%;
+  font-size: 20px;
 }
 
 body {
     background-image: url("korea.jpg");
+    font-family: "Noto Sans", sans-serif;
   }
 
  /* .header {
@@ -182,7 +190,7 @@ ul {
   list-style: none;
   font-size: 2rem;
   align-items: center;
-  height: 300px;
+  height: 200px;
   scroll-snap-align: start;
   display: flex;
   flex-shrink: 0;

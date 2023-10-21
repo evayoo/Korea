@@ -1,0 +1,14 @@
+main {
+    padding: 10% 
+}
+
+main img {
+    padding: 2%;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border-radius: 7px;
+}
+

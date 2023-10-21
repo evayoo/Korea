@@ -11,9 +11,10 @@ const weddingContainer = document.getElementById('wedding-container');
 weddings.forEach(function (wedding) {
     let weddingCard = `
          <div class="d-flex mb-4">
-            <div class="wedding-wrap">
-                <img src="${wedding.imgSrc}" class="wedding-photo" alt="${wedding.name}'s picture">
-            </div>
+         <div class="wedding-wrap d-flex flex-column">
+         <img src="${wedding.imgSrc}" class="wedding-photo" alt="${wedding.name}'s picture">
+         <h5 class="card-title1">${wedding.name}</h5>
+         </div>
             <div class="info d-none">
                     <h5 class="card-title">${wedding.name}</h5>
                     <div class="card-text mt-4"><strong>Detail:</strong> ${wedding.detail}</div>

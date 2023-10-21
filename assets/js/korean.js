@@ -10,9 +10,10 @@ const koreanContainer = document.getElementById('korean-container');
 koreans.forEach(function (korean) {
     let koreanCard = `
          <div class="d-flex mb-4">
-            <div class="korean-wrap">
-                <img src="${korean.imgSrc}" class="korean-photo" alt="${korean.name}'s picture">
-            </div>
+         <div class="korean-wrap d-flex flex-column">
+         <img src="${korean.imgSrc}" class="korean-photo" alt="${korean.name}'s picture">
+         <h5 class="card-title1">${korean.name}</h5>
+         </div>
             <div class="info d-none">
                     <h5 class="card-title">${korean.name}</h5>
                     <div class="card-text mt-4"><strong>Detail:</strong> ${korean.detail}</div>

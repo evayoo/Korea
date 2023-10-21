@@ -9,8 +9,9 @@ const travelContainer = document.getElementById('travel-container');
 travels.forEach(function (travel) {
     let travelCard = `
          <div class="d-flex mb-4">
-            <div class="travel-wrap">
+            <div class="travel-wrap d-flex flex-column">
                 <img src="${travel.imgSrc}" class="travel-photo" alt="${travel.name}'s picture">
+                <h5 class="card-title1">${travel.name}</h5>
             </div>
             <div class="info d-none">
                     <h5 class="card-title">${travel.name}</h5>

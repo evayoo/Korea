@@ -16,8 +16,9 @@ const foodContainer = document.getElementById('food-container');
 foods.forEach(function (food) {
     let foodCard = `
          <div class="d-flex mb-4">
-            <div class="food-wrap">
-                <img src="${food.imgSrc}" class="food-photo" alt="${food.name}'s picture">
+            <div class="food-wrap d-flex flex-column">
+            <img src="${food.imgSrc}" class="food-photo" alt="${food.name}'s picture">
+            <h5 class="card-title1">${food.name}</h5>
             </div>
             <div class="info d-none">
                     <h5 class="card-title">${food.name}</h5>

@@ -13,9 +13,10 @@ const marketings = [
         marketings.forEach(function (marketing) {
             let marketingCard = `
                  <div class="d-flex mb-4">
-                    <div class="marketing-wrap">
-                        <img src="${marketing.imgSrc}" class="marketing-photo" alt="${marketing.name}'s picture">
-                    </div>
+                 <div class="marketing-wrap d-flex flex-column">
+                 <img src="${marketing.imgSrc}" class="marketing-photo" alt="${marketing.name}'s picture">
+                 <h5 class="card-title1">${marketing.name}</h5>
+                 </div>
                     <div class="info d-none">
                             <h5 class="card-title">${marketing.name}</h5>
                             <div class="card-text mt-4"><strong>link:</strong> ${marketing.detail}</div>

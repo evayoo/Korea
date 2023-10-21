@@ -10,9 +10,10 @@ const hanbokContainer = document.getElementById('hanbok-container');
 hanboks.forEach(function (hanbok) {
     let hanbokCard = `
          <div class="d-flex mb-4">
-            <div class="hanbok-wrap">
-                <img src="${hanbok.imgSrc}" class="hanbok-photo" alt="${hanbok.name}'s picture">
-            </div>
+         <div class="hanbok-wrap d-flex flex-column">
+         <img src="${hanbok.imgSrc}" class="hanbok-photo" alt="${hanbok.name}'s picture">
+         <h5 class="card-title1">${hanbok.name}</h5>
+         </div>
             <div class="info d-none">
                     <h5 class="card-title">${hanbok.name}</h5>
                     <div class="card-text"><strong>Price:</strong> ${hanbok.price}</div>

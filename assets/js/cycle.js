@@ -10,13 +10,14 @@ const cycleContainer = document.getElementById('cycle-container');
 cycles.forEach(function (cycle) {
     let cycleCard = `
          <div class="d-flex mb-4">
-            <div class="cycle-wrap">
-                <img src="${cycle.imgSrc}" class="cycle-photo" alt="${cycle.name}'s picture">
-            </div>
+         <div class="cycle-wrap d-flex flex-column">
+         <img src="${cycle.imgSrc}" class="cycle-photo" alt="${cycle.name}'s picture">
+         <h5 class="card-title1">${cycle.name}</h5>
+         </div>
             <div class="info d-none">
                     <h5 class="card-title">${cycle.name}</h5>
-                    <div class="card-text mt-4"><strong>link:</strong> ${cycle.detail}</div>
-                    <div class="card-text"><strong>Cooking time:</strong> ${cycle.time}</div>
+                    <div class="card-text mt-4"><strong>Detail:</strong> ${cycle.detail}</div>
+                    <div class="card-text"><strong>Time:</strong> ${cycle.time}</div>
                     <div class="card-text"><strong>Price:</strong> ${cycle.price}</div>
             </div>
          </div>

@@ -11,9 +11,10 @@ const anmaContainer = document.getElementById('anma-container');
 anmas.forEach(function (anma) {
     let anmaCard = `
          <div class="d-flex mb-4">
-            <div class="anma-wrap">
-                <img src="${anma.imgSrc}" class="anma-photo" alt="${anma.name}'s picture">
-            </div>
+         <div class="anma-wrap d-flex flex-column">
+         <img src="${anma.imgSrc}" class="anma-photo" alt="${anma.name}'s picture">
+         <h5 class="card-title1">${anma.name}</h5>
+         </div>
             <div class="info d-none">
                     <h5 class="card-title">${anma.name}</h5>
                     <div class="card-text"><strong>Cooking time:</strong> ${anma.time}</div>

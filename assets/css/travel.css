@@ -3,6 +3,12 @@
     padding: 5%;
 }
 
+.card-title1 {
+    font-weight: bold;
+    text-align: center;
+    padding: 5%
+}
+
 .travel-wrap {
     height: 300px;
     width: 240px;
