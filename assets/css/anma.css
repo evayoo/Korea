@@ -9,16 +9,17 @@
     padding: 5%
 }
 
-.travel-wrap {
+.anma-wrap {
     height: 300px;
     width: 240px;
     margin-right: 15px;
 }
 
-.travel-photo {
+.anma-photo {
     height: 245px;
     width: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 7px;
     transition: transform 0.3s ease-in-out;
 }
@@ -32,14 +33,14 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .travel-wrap {
+    .anma-wrap {
         height: 200px;
         width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .travel-wrap {
+    .anma-wrap {
         height: 150px;
         width: 120px;
     }

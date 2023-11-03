@@ -1,8 +1,8 @@
 const hanboks = [
-    { name: 'Modern hanbok', price: '50 CHF/hour', imgSrc: '/assets/images/modern.jpeg'},
-    { name: 'Summer hanbok', price: '40 CHF/hour', imgSrc: '/assets/images/dress.jpeg' },
-    { name: 'Summer blouse', price: '30 CHF/hour', imgSrc: '/assets/images/blouse.jpeg' },
-    { name: 'Couple hanbok', price: '100 CHF/hour', imgSrc: '/assets/images/hanbok3.jpg' },
+    { name: 'Modern hanbok', price: '50 CHF/day', imgSrc: '/assets/images/modern.jpeg'},
+    { name: 'Summer hanbok', price: '40 CHF/day', imgSrc: '/assets/images/dress.jpeg' },
+    { name: 'Summer blouse', price: '30 CHF/day', imgSrc: '/assets/images/blouse.jpeg' },
+    { name: 'Couple hanbok', price: '100 CHF/day', imgSrc: '/assets/images/hanbok3.jpg' },
     ];
 
 const hanbokContainer = document.getElementById('hanbok-container');
@@ -17,6 +17,7 @@ hanboks.forEach(function (hanbok) {
             <div class="info d-none">
                     <h5 class="card-title">${hanbok.name}</h5>
                     <div class="card-text"><strong>Price:</strong> ${hanbok.price}</div>
+                    <button className="item-button">Add to cart</button>
             </div>
          </div>
        

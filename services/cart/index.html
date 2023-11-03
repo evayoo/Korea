@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/App.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unica+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans"> 
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div><img class="logo" src="../../assets/images/logo.png"></div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/services/cart/">Shopping Cart</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div id="item-list-container">
+      <div id="item-list-body">
+        <div id="item-list-title">Shopping Cart</div>
+        <span id="shopping-cart-select-all">
+          <input type="checkbox" id="selectAllCheckbox">
+          <label>Select All</label>
+        </span>
+        <div id="shopping-cart-container">
+          <div id="cart-item-list">
+            <!-- Cart items will be added dynamically here -->
+          </div>
+        </div>
+    <div id="cart">
+        <!-- Add your cart items dynamically here -->
+      </div>
+      <div id="order-summary-container">
+        <h4>Total</h4>
+        <div id="order-summary">
+          Num of items : <span class="order-summary-text" id="totalQty">0 Items</span>
+          <hr>
+          </hr>
+          <div id="order-summary-total">
+            Total : <span class="order-summary-text" id="totalAmount">0 CHF</span>
+          </div>
+        </div>
+      </div>
+
+          <!-- <div id="order-summary-container">
+            <h4>Total amount</h4>
+            <div id="order-summary">
+              Num of items: <span id="totalQty" class="order-summary-text">0 Items</span>
+              <hr></hr>
+              <div id="order-summary-total">
+                Total: <span id="totalAmount" class="order-summary-text">0 CHF</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div id="content"></div>
+
+      <!-- <script>
+        // Initial state (replace with your actual initial state)
+        const initialState = {
+          items: [/* Your items data */],
+          cartItems: [/* Your cart items data */],
+        };
+    
+        // Render the initial content
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = '<h1>Welcome to your app!</h1>';
+    
+        // Router function
+        function navigateTo(route) {
+          if (route === '/') {
+            // Render the ItemListContainer
+            contentElement.innerHTML = '<h1>ItemListContainer (Home)</h1>';
+          } else if (route === '/shoppingcart') {
+            // Render the ShoppingCart
+            contentElement.innerHTML = '<h1>ShoppingCart</h1>';
+          } else {
+            // Handle 404 or other routes as needed
+            contentElement.innerHTML = '<h1>Not Found</h1>';
+          }
+        }
+    
+        // Handle navigation on page load and link clicks
+        function handleNavigation() {
+          const currentRoute = window.location.pathname;
+          navigateTo(currentRoute);
+        }
+    
+        // Listen for changes to the URL
+        window.addEventListener('popstate', handleNavigation);
+    
+        // Listen for clicks on links to navigate without page reload
+        const navLinks = document.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', event => {
+            event.preventDefault();
+            const route = link.getAttribute('href');
+            history.pushState(null, '', route);
+            handleNavigation();
+          });
+        });
+    
+        // Initial navigation
+        handleNavigation();
+      </script>
+      
+       -->
+             
+      <script src="../../assets/js/ShoppingCart.js"></script>
+</body>
+</html>

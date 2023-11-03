@@ -20,8 +20,9 @@ const marketings = [
                     <div class="info d-none">
                             <h5 class="card-title">${marketing.name}</h5>
                             <div class="card-text mt-4"><strong>link:</strong> ${marketing.detail}</div>
-                            <div class="card-text"><strong>Cooking time:</strong> ${marketing.time}</div>
+                            <div class="card-text"><strong>Time:</strong> ${marketing.time}</div>
                             <div class="card-text"><strong>Price:</strong> ${marketing.price}</div>
+                            <button className="item-button">Add to cart</button>
                     </div>
                  </div>
                

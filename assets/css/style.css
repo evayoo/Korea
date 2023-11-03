@@ -10,9 +10,8 @@
   display: flex;
   background-color: #f3f3eb;
   padding: 10px 20px;
-  display: flex;
   justify-content: space-between;
-  
+  font-family: "Unica One", sans-serif;
 
 }
 
@@ -25,6 +24,7 @@
   color: #fff;
   font-size: 24px;
   font-weight: bold;
+  font-family: "Unica One", sans-serif;
 }
 
 /* Style the navigation links */
@@ -81,6 +81,14 @@
   }
 }
 
+h1 {
+  margin: 5%;
+  font-family: "Unica One", sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 p {
   margin-left: 10%;
   margin-right: 10%;
@@ -119,6 +127,8 @@ body {
     border-radius: 10px;
     padding: 100px;
     font-size: 150%;
+    font-family: "Unica One", sans-serif;
+    text-shadow: 4px 4px 8px #312e2e;
     background-size: cover;
     width: 100%;
     display: flex;
@@ -168,7 +178,7 @@ body {
   }
 
   #ii {
-    background-image: url(/assets/images/feed.jpg);
+    background-image: url(/assets/images/modern.jpeg);
   }
 
 /*.header,
@@ -189,6 +199,7 @@ ul {
   height: 100%;
   list-style: none;
   font-size: 2rem;
+  font-family: "Unica One", sans-serif;
   align-items: center;
   height: 200px;
   scroll-snap-align: start;
@@ -213,4 +224,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  background-color: #deceff;
+  border: none;
+  border-radius: 1rem;
+  width: 170px;
+  padding: 0.3rem;
+  text-align: center;
+  color: #4000c7;
+  margin-top: 0.4rem;
+  margin-left: 1.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: #4000c7;
+  box-shadow: 1px 2px 1px rgb(189, 189, 189);
 }

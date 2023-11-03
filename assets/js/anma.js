@@ -1,9 +1,9 @@
 const anmas = [
-    { name: 'Shoulder and back', time: '20 min', price: '20 CHF', imgSrc: '../assets/css/anma.jpg'},
-    { name: 'Neck, scalp and face', time: '20 min', price: '20 CHF', imgSrc: '../assets/css/anma.jpg' },
-    { name: 'Feet', time: '20 min', price: '20 CHF', imgSrc: '../assets/css/anma.jpg' },
-    { name: 'Hand and arm', time: '10 min', price: '10 CHF', imgSrc: '../assets/css/anma.jpg' },
-    { name: 'Whole body massage', time: '30 min', price: '30 CHF', imgSrc: '../assets/css/anma.jpg' },
+    { name: 'Shoulder and back', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/back.jpg'},
+    { name: 'Neck, scalp and face', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/neck.jpg' },
+    { name: 'Feet', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/feet.jpg' },
+    { name: 'Hand and arm', time: '10 min', price: '10 CHF', imgSrc: '/assets/images/hand.jpg' },
+    { name: 'Whole body massage', time: '30 min', price: '30 CHF', imgSrc: '/assets/images/whole.jpg' },
     ];
 
 const anmaContainer = document.getElementById('anma-container');
@@ -17,8 +17,9 @@ anmas.forEach(function (anma) {
          </div>
             <div class="info d-none">
                     <h5 class="card-title">${anma.name}</h5>
-                    <div class="card-text"><strong>Cooking time:</strong> ${anma.time}</div>
+                    <div class="card-text"><strong>Time:</strong> ${anma.time}</div>
                     <div class="card-text"><strong>Price:</strong> ${anma.price}</div>
+                    <button className="item-button">Add to cart</button>
             </div>
          </div>
        

@@ -17,6 +17,7 @@ travels.forEach(function (travel) {
                     <h5 class="card-title">${travel.name}</h5>
                     <div class="card-text mt-4"><strong>Detail:</strong> ${travel.detail}</div>
                     <div class="card-text"><strong>Price:</strong> ${travel.price}</div>
+                    <button className="item-button">Add to cart</button>
             </div>
          </div>
        

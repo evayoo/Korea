@@ -19,6 +19,7 @@ cycles.forEach(function (cycle) {
                     <div class="card-text mt-4"><strong>Detail:</strong> ${cycle.detail}</div>
                     <div class="card-text"><strong>Time:</strong> ${cycle.time}</div>
                     <div class="card-text"><strong>Price:</strong> ${cycle.price}</div>
+                    <button className="item-button">Add to cart</button>
             </div>
          </div>
        
