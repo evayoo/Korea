@@ -1,31 +1,31 @@
-const hanboks = [
-    { name: 'Modern hanbok', price: '50 CHF/day', imgSrc: '/assets/images/modern.jpeg'},
-    { name: 'Summer hanbok', price: '40 CHF/day', imgSrc: '/assets/images/dress.jpeg' },
-    { name: 'Summer blouse', price: '30 CHF/day', imgSrc: '/assets/images/blouse.jpeg' },
-    { name: 'Couple hanbok', price: '100 CHF/day', imgSrc: '/assets/images/hanbok3.jpg' },
+const items = [
+    { id: 24, name: 'Modern item', price: 50, imgSrc: '/assets/images/modern.jpeg'},
+    { id: 25, name: 'Summer item', price: 40, imgSrc: '/assets/images/dress.jpeg' },
+    { id: 26, name: 'Summer blouse', price: 30, imgSrc: '/assets/images/blouse.jpeg' },
+    { id: 27, name: 'Couple item', price: 100, imgSrc: '/assets/images/hanbok3.jpg' },
     ];
 
-const hanbokContainer = document.getElementById('hanbok-container');
+const itemContainer = document.getElementById('item-container');
 
-hanboks.forEach(function (hanbok) {
-    let hanbokCard = `
+items.forEach(function (item) {
+    let itemCard = `
          <div class="d-flex mb-4">
-         <div class="hanbok-wrap d-flex flex-column">
-         <img src="${hanbok.imgSrc}" class="hanbok-photo" alt="${hanbok.name}'s picture">
-         <h5 class="card-title1">${hanbok.name}</h5>
+         <div class="item-wrap d-flex flex-column">
+         <img src="${item.imgSrc}" class="item-photo" alt="${item.name}'s picture">
+         <h5 class="card-title1">${item.name}</h5>
          </div>
             <div class="info d-none">
-                    <h5 class="card-title">${hanbok.name}</h5>
-                    <div class="card-text"><strong>Price:</strong> ${hanbok.price}</div>
+                    <h5 class="card-title">${item.name}</h5>
+                    <div class="card-text"><strong>Price:</strong> ${item.price}</div>
                     <button className="item-button">Add to cart</button>
             </div>
          </div>
        
     `;
-    hanbokContainer.insertAdjacentHTML('beforeend', hanbokCard);
+    itemContainer.insertAdjacentHTML('beforeend', itemCard);
 });
 
-let clickElements = document.getElementsByClassName('hanbok-photo');
+let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
 
 for (let i = 0; i < clickElements.length; i++) {
@@ -35,7 +35,7 @@ for (let i = 0; i < clickElements.length; i++) {
     });
 
     clickElements[i].addEventListener('mouseout', function () {
-        clickElements[i].src = hanboks[i].imgSrc;
+        clickElements[i].src = items[i].imgSrc;
     });
 }
 

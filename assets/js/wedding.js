@@ -1,33 +1,33 @@
-const weddings = [
-    { name: 'Plan a Korean wedding ceremony', detail: 'I can help you plan a wedding ceremony in Seoul', price: '10,000 CHF/day', imgSrc: '/assets/images/plan.jpg'},
-    { name: 'Wedding photo', detail: 'I can help you book a wedding photo session in Seoul', price: '800 CHF/day', imgSrc: '/assets/images/photo.jpg' },
-    { name: 'Makeup & Hair', detail: 'I can help you book a Makeup & Hair service in Seoul', price: '150 CHF/day', imgSrc: '/assets/images/hair.jpg' },
-    { name: 'Learn about Korean traditional wedding', detail: 'I can tell you about with pictures', price: 'free', imgSrc: '/assets/images/tradition.jpg'},
-    { name: 'Learn about Korean traditional music', detail: 'I can share some nice Korean traditional music with you', price: 'free', imgSrc: '/assets/images/music.jpg' },
+const items = [
+    { id: 38, name: 'Plan a Korean item ceremony', detail: 'I can help you plan a item ceremony in Seoul. The price is per day', price: 10000 , imgSrc: '/assets/images/plan.jpg'},
+    { id: 39, name: 'Wedding photography', detail: 'I can help you book a item photo session in Seoul. The price is per day', price: 800, imgSrc: '/assets/images/photo.jpg' },
+    { id: 40, name: 'Makeup & Hair', detail: 'I can help you book a Makeup & Hair service in Seoul. The price is per day', price: 150, imgSrc: '/assets/images/hair.jpg' },
+    { id: 41, name: 'Learn about Korean traditional item', detail: 'I can tell you about with pictures', price: 0, imgSrc: '/assets/images/tradition.jpg'},
+    { id: 42, name: 'Learn about Korean traditional music', detail: 'I can share some nice Korean traditional music with you', price: 0, imgSrc: '/assets/images/music.jpg' },
     ];
 
-const weddingContainer = document.getElementById('wedding-container');
+const itemContainer = document.getElementById('item-container');
 
-weddings.forEach(function (wedding) {
-    let weddingCard = `
+items.forEach(function (item) {
+    let itemCard = `
          <div class="d-flex mb-4">
-         <div class="wedding-wrap d-flex flex-column">
-         <img src="${wedding.imgSrc}" class="wedding-photo" alt="${wedding.name}'s picture">
-         <h5 class="card-title1">${wedding.name}</h5>
+         <div class="item-wrap d-flex flex-column">
+         <img src="${item.imgSrc}" class="item-photo" alt="${item.name}'s picture">
+         <h5 class="card-title1">${item.name}</h5>
          </div>
             <div class="info d-none">
-                    <h5 class="card-title">${wedding.name}</h5>
-                    <div class="card-text mt-4"><strong>Detail:</strong> ${wedding.detail}</div>
-                    <div class="card-text"><strong>Price:</strong> ${wedding.price}</div>
+                    <h5 class="card-title">${item.name}</h5>
+                    <div class="card-text mt-4"><strong>Detail:</strong> ${item.detail}</div>
+                    <div class="card-text"><strong>Price:</strong> ${item.price}</div>
                     <button className="item-button">Add to cart</button>
             </div>
          </div>
        
     `;
-    weddingContainer.insertAdjacentHTML('beforeend', weddingCard);
+    itemContainer.insertAdjacentHTML('beforeend', itemCard);
 });
 
-let clickElements = document.getElementsByClassName('wedding-photo');
+let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
 
 for (let i = 0; i < clickElements.length; i++) {
@@ -37,7 +37,7 @@ for (let i = 0; i < clickElements.length; i++) {
     });
 
     clickElements[i].addEventListener('mouseout', function () {
-        clickElements[i].src = weddings[i].imgSrc;
+        clickElements[i].src = items[i].imgSrc;
     });
 }
 

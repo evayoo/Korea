@@ -1,33 +1,33 @@
-const anmas = [
-    { name: 'Shoulder and back', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/back.jpg'},
-    { name: 'Neck, scalp and face', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/neck.jpg' },
-    { name: 'Feet', time: '20 min', price: '20 CHF', imgSrc: '/assets/images/feet.jpg' },
-    { name: 'Hand and arm', time: '10 min', price: '10 CHF', imgSrc: '/assets/images/hand.jpg' },
-    { name: 'Whole body massage', time: '30 min', price: '30 CHF', imgSrc: '/assets/images/whole.jpg' },
-    ];
+const items = [
+    { id: 15, name: 'Shoulder and back', time: '20 min', price: 20, imgSrc: '/assets/images/back.jpg'},
+    { id: 16, name: 'Neck, scalp and face', time: '20 min', price: 20, imgSrc: '/assets/images/neck.jpg' },
+    { id: 17, name: 'Feet', time: '20 min', price: 20, imgSrc: '/assets/images/feet.jpg' },
+    { id: 18, name: 'Hand and arm', time: '10 min', price: 10, imgSrc: '/assets/images/hand.jpg' },
+    { id: 19, name: 'Whole body massage', time: '30 min', price: 30, imgSrc: '/assets/images/whole.jpg' },
+];
 
-const anmaContainer = document.getElementById('anma-container');
+const itemContainer = document.getElementById('item-container');
 
-anmas.forEach(function (anma) {
-    let anmaCard = `
+items.forEach(function (item) {
+    let itemCard = `
          <div class="d-flex mb-4">
-         <div class="anma-wrap d-flex flex-column">
-         <img src="${anma.imgSrc}" class="anma-photo" alt="${anma.name}'s picture">
-         <h5 class="card-title1">${anma.name}</h5>
+         <div class="item-wrap d-flex flex-column">
+         <img src="${item.imgSrc}" class="item-photo" alt="${item.name}'s picture">
+         <h5 class="card-title1">${item.name}</h5>
          </div>
             <div class="info d-none">
-                    <h5 class="card-title">${anma.name}</h5>
-                    <div class="card-text"><strong>Time:</strong> ${anma.time}</div>
-                    <div class="card-text"><strong>Price:</strong> ${anma.price}</div>
+                    <h5 class="card-title">${item.name}</h5>
+                    <div class="card-text"><strong>Time:</strong> ${item.time}</div>
+                    <div class="card-text"><strong>Price:</strong> ${item.price}</div>
                     <button className="item-button">Add to cart</button>
             </div>
          </div>
        
     `;
-    anmaContainer.insertAdjacentHTML('beforeend', anmaCard);
+    itemContainer.insertAdjacentHTML('beforeend', itemCard);
 });
 
-let clickElements = document.getElementsByClassName('anma-photo');
+let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
 
 for (let i = 0; i < clickElements.length; i++) {
@@ -37,7 +37,7 @@ for (let i = 0; i < clickElements.length; i++) {
     });
 
     clickElements[i].addEventListener('mouseout', function () {
-        clickElements[i].src = anmas[i].imgSrc;
+        clickElements[i].src = items[i].imgSrc;
     });
 }
 

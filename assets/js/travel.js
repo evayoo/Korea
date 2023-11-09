@@ -1,31 +1,31 @@
-const travels = [
-    { name: 'Set up Korea travel plan', detail: 'I can help you set up a customized Korea trip', price: '50 CHF/hour', imgSrc: '/assets/images/korea.jpg'},
-    { name: 'Hire a Korean guide', detail: 'English speaking guide will acompany you', price: '100 CHF/day', imgSrc: '/assets/images/guide.jpg' },
-    { name: 'Hire a driver', detail: 'A professional driver will acompany you with a SUV', price: '100 CHF/day', imgSrc: '/assets/images/driver.jpg' },
+const items = [
+    { id: 35, name: 'Set up Korea item plan', detail: 'I can help you set up a customized Korea trip. The price is based on hour', price: 50, imgSrc: '/assets/images/korea.jpg'},
+    { id: 36, name: 'Hire a Korean guide', detail: 'English speaking guide will acompany you. The price is based on hour', price: 30, imgSrc: '/assets/images/guide.jpg' },
+    { id: 37, name: 'Hire a driver', detail: 'A professional driver will acompany you with a SUV with maximum passengers of 6 people. The price is based on hour', price: 30, imgSrc: '/assets/images/driver.jpg' },
     ];
 
-const travelContainer = document.getElementById('travel-container');
+const itemContainer = document.getElementById('item-container');
 
-travels.forEach(function (travel) {
-    let travelCard = `
+items.forEach(function (item) {
+    let itemCard = `
          <div class="d-flex mb-4">
-            <div class="travel-wrap d-flex flex-column">
-                <img src="${travel.imgSrc}" class="travel-photo" alt="${travel.name}'s picture">
-                <h5 class="card-title1">${travel.name}</h5>
+            <div class="item-wrap d-flex flex-column">
+                <img src="${item.imgSrc}" class="item-photo" alt="${item.name}'s picture">
+                <h5 class="card-title1">${item.name}</h5>
             </div>
             <div class="info d-none">
-                    <h5 class="card-title">${travel.name}</h5>
-                    <div class="card-text mt-4"><strong>Detail:</strong> ${travel.detail}</div>
-                    <div class="card-text"><strong>Price:</strong> ${travel.price}</div>
+                    <h5 class="card-title">${item.name}</h5>
+                    <div class="card-text mt-4"><strong>Detail:</strong> ${item.detail}</div>
+                    <div class="card-text"><strong>Price:</strong> ${item.price}</div>
                     <button className="item-button">Add to cart</button>
             </div>
          </div>
        
     `;
-    travelContainer.insertAdjacentHTML('beforeend', travelCard);
+    itemContainer.insertAdjacentHTML('beforeend', itemCard);
 });
 
-let clickElements = document.getElementsByClassName('travel-photo');
+let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
 
 for (let i = 0; i < clickElements.length; i++) {
@@ -35,7 +35,7 @@ for (let i = 0; i < clickElements.length; i++) {
     });
 
     clickElements[i].addEventListener('mouseout', function () {
-        clickElements[i].src = travels[i].imgSrc;
+        clickElements[i].src = items[i].imgSrc;
     });
 }
 

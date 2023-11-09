@@ -9,13 +9,13 @@
     padding: 5%
 }
 
-.food-wrap {
+.item-wrap {
     height: 300px;
     width: 240px;
     margin-right: 15px;
 }
 
-.food-photo {
+.item-photo {
     height: 245px;
     width: 100%;
     object-fit: cover;
@@ -33,14 +33,14 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .food-wrap {
+    .item-wrap {
         height: 200px;
         width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .food-wrap {
+    .item-wrap {
         height: 150px;
         width: 120px;
     }

@@ -3,13 +3,13 @@
     padding: 5%;
 }
 
-.cycle-wrap {
+.item-wrap {
     height: 300px;
     width: 240px;
     margin-right: 15px;
 }
 
-.cycle-photo {
+.item-photo {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -26,14 +26,14 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .cycle-wrap {
+    .item-wrap {
         height: 200px;
         width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .cycle-wrap {
+    .item-wrap {
         height: 150px;
         width: 120px;
     }

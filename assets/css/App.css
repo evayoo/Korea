@@ -35,6 +35,7 @@
     padding: 10px;
     flex: 1 0 auto;
     margin-top: 30px;
+    max-width: 53ch;
   }
   
   .cart-item-title{

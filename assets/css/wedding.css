@@ -3,13 +3,13 @@
     padding: 5%;
 }
 
-.wedding-wrap {
+.item-wrap {
     height: 300px;
     width: 240px;
     margin-right: 15px;
 }
 
-.wedding-photo {
+.item-photo {
     height: 245px;
     width: 100%;
     object-fit: cover;
@@ -26,7 +26,7 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .wedding
+    .item
 -wrap {
         height: 200px;
         width: 160px;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-    .wedding
+    .item
 -wrap {
         height: 150px;
         width: 120px;

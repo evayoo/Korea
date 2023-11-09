@@ -3,14 +3,14 @@
     padding: 5%;
 }
 
-.marketing-wrap {
+.item-wrap {
     height: 300px;
     width: 240px;
     margin-right: 15px;
 }
 
-.marketing-photo {
-    height: 100%;
+.item-photo {
+    height: 245px;
     width: 100%;
     object-fit: cover;
     border-radius: 7px;
@@ -26,14 +26,14 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .marketing-wrap {
+    .item-wrap {
         height: 200px;
         width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .marketing-wrap {
+    .item-wrap {
         height: 150px;
         width: 120px;
     }
