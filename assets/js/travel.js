@@ -17,7 +17,7 @@ items.forEach(function (item) {
                     <h5 class="card-title">${item.name}</h5>
                     <div class="card-text mt-4"><strong>Detail:</strong> ${item.detail}</div>
                     <div class="card-text"><strong>Price:</strong> ${item.price}</div>
-                    <button className="item-button">Add to cart</button>
+                    <button class="item-button">Add to cart</button>
             </div>
          </div>
        
@@ -27,11 +27,21 @@ items.forEach(function (item) {
 
 let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
+let addToCartButtons = document.getElementsByClassName('item-button');
 
 for (let i = 0; i < clickElements.length; i++) {
     clickElements[i].addEventListener('click', function () {
         hideAllExcept(i);
         targetElements[i].classList.toggle('d-none');
+        console.log(items[i].name);
+    });
+
+    targetElements[i].querySelector('.item-button').addEventListener('click', function () {
+        // Get the ID of the item associated with the clicked "Add to cart" button
+        const itemId = items[i].id;
+
+        // Add the item ID to local storage (you can customize the key and storage logic)
+        localStorage.setItem('cartItemIds', JSON.stringify([...getCartItemIdsFromStorage(), itemId]));
     });
 
     clickElements[i].addEventListener('mouseout', function () {
@@ -41,10 +51,16 @@ for (let i = 0; i < clickElements.length; i++) {
 
 function hideAllExcept(index) {
     for (let i = 0; i < clickElements.length; i++) {
-        if(i == index) {
+        if (i == index) {
             continue;
         }
 
         targetElements[i].classList.add('d-none');
-    } 
+    }
+}
+
+function getCartItemIdsFromStorage() {
+    // Retrieve the stored item IDs from local storage
+    const cartItemIds = localStorage.getItem('cartItemIds');
+    return cartItemIds ? JSON.parse(cartItemIds) : [];
 }

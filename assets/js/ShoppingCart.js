@@ -78,7 +78,7 @@ const quantity = 1;
 
 const cart = document.getElementById("cart");
 
-console.log(localStorage.getItem('cartItemIds'));
+console.log(localStorage.getItem('cartItemIds'), 'cartItemIds');
 
 let listOFId = JSON.parse(localStorage.getItem('cartItemIds'));
 
@@ -97,10 +97,10 @@ let items = [
   { id: 12, name: 'Learn Korean language (any level)', detail: 'You will learn how to speak Korean elegantly', price: 50, imgSrc: '/assets/images/hangul.jpg' },
   { id: 13, name: 'Learn Korean with K-pop', detail: 'You can bring any K-pop song you like', price: 50, imgSrc: '/assets/images/kpop.jpg' },
   { id: 14, name: 'Learn Korean with K-drama', detail: 'You can bring any K-drama/Korean film you like', price: 50, imgSrc: '/assets/images/drama.jpg' },
-  { id: 15, name: 'Shoulder and back', time: '20 min', price: 20, imgSrc: '/assets/images/back.jpg'},
-  { id: 16, name: 'Neck, scalp and face', time: '20 min', price: 20, imgSrc: '/assets/images/neck.jpg' },
-  { id: 17, name: 'Feet', time: '20 min', price: 20, imgSrc: '/assets/images/feet.jpg' },
-  { id: 18, name: 'Hand and arm', time: '10 min', price: 10, imgSrc: '/assets/images/hand.jpg' },
+  { id: 15, name: 'Shoulder and back massage', time: '20 min', price: 20, imgSrc: '/assets/images/back.jpg'},
+  { id: 16, name: 'Neck, scalp and face massage', time: '20 min', price: 20, imgSrc: '/assets/images/neck.jpg' },
+  { id: 17, name: 'Feet massage', time: '20 min', price: 20, imgSrc: '/assets/images/feet.jpg' },
+  { id: 18, name: 'Hand and arm massage', time: '10 min', price: 10, imgSrc: '/assets/images/hand.jpg' },
   { id: 19, name: 'Whole body massage', time: '30 min', price: 30, imgSrc: '/assets/images/whole.jpg' },
   { id: 20, name: 'Book "item the Silk Road"', detail: 'The book is about my 8-month item trip across 14 countries. The price is including shipping fee within Switzerland', time: 'upto 3 delivery days', price: 45, imgSrc: '/assets/images/cycling.jpg'},
   { id: 21, name: 'Plan your item trip', detail: 'I can share tips for Eurasia route', time: '1 hour', price: 100, imgSrc: '/assets/images/route.png' },
@@ -127,37 +127,17 @@ let items = [
             { id: 42, name: 'Learn about Korean traditional music', detail: 'I can share some nice Korean traditional music with you', price: 0, imgSrc: '/assets/images/music.jpg' },
            
 ];
-
-  let result = items.sort().reduce((acc, current) => {
-    const length = acc.length;
-    if (length === 0 || acc[length - 1].id !== current.id) {
-      acc.push(current);
-    }
-    return acc;
-    
-},[]);
-console.log(result);
-
-let finalId = result.map(item => item.id);
-
-//console.log(item);
+let result = removeDupl (listOFId)
+function removeDupl(arr) {
+    return arr.filter((item, index) => {
+        return arr.indexOf(item) === index;
+    });
+  }
 handleCheckChange = function () {};
 handleQuantityChange = function () {};
 handleDelete = function () {};
-const cartItem = createCartItemElement(
-  items,
-  checkedItems,
-  handleCheckChange,
-  handleQuantityChange,
-  handleDelete,
-  quantity
-);
-// cart.appendChild(cartItem);
-console.log(cartItem);
 
-console.log(finalId);
-
-finalId.forEach(idFromLocalStorage =>{
+result.forEach(idFromLocalStorage =>{
   items.forEach((service) => {
      if( service.id === idFromLocalStorage){
       let cartItem = createCartItemElement(
@@ -183,13 +163,13 @@ function updateOrderSummary(totalQty, totalAmount) {
     totalAmountElement.textContent = totalAmount + " CHF";
   }
 }
-let totalQty = listOFId.length;
+let totalQty = result.length;
 let totalAmount = 0;
-for (let i = 0; i < listOFId.length; i++) {
-  console.log(items[listOFId[i]].price)
-  totalAmount += items[listOFId[i]].price;
+for (let i = 0; i < result.length; i++) {
+  console.log(items[result[i]].price)
+  totalAmount += items[result[i]].price;
 }
 console.log(totalQty, totalAmount)
-console.log(listOFId)
+console.log(result)
 
 updateOrderSummary(totalQty, totalAmount);

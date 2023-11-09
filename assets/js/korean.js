@@ -1,8 +1,8 @@
 const items = [
-    { "id": 11, name: 'Learn Hangul, Korean alphabet', detail: 'We will learn how to read and write Korean', price: 50 , imgSrc: '/assets/images/hangul1.jpg'},
-    { "id": 12, name: 'Learn Korean language (any level)', detail: 'You will learn how to speak Korean elegantly', price: 50 , imgSrc: '/assets/images/hangul.jpg' },
-    { "id": 13, name: 'Learn Korean with K-pop', detail: 'You can bring any K-pop song you like', price: 50 , imgSrc: '/assets/images/kpop.jpg' },
-    { "id": 14, name: 'Learn Korean with K-drama', detail: 'You can bring any K-drama/Korean film you like', price: 50 , imgSrc: '/assets/images/drama.jpg' },
+    { id: 11, name: 'Learn Hangul, Korean alphabet', detail: 'We will learn how to read and write Korean', price: 50 , imgSrc: '/assets/images/hangul1.jpg'},
+    { id: 12, name: 'Learn Korean language (any level)', detail: 'You will learn how to speak Korean elegantly', price: 50 , imgSrc: '/assets/images/hangul.jpg' },
+    { id: 13, name: 'Learn Korean with K-pop', detail: 'You can bring any K-pop song you like', price: 50 , imgSrc: '/assets/images/kpop.jpg' },
+    { id: 14, name: 'Learn Korean with K-drama', detail: 'You can bring any K-drama/Korean film you like', price: 50 , imgSrc: '/assets/images/drama.jpg' },
     ];
 
 const itemContainer = document.getElementById('item-container');
@@ -67,7 +67,5 @@ function getCartItemIdsFromStorage() {
     const cartItemIds = localStorage.getItem('cartItemIds');
     return cartItemIds ? JSON.parse(cartItemIds) : [];
 }
-
-// 만약에 앞서 선택한 항목을 한 번 더 클릭하면, 카드가 추가 되지 않는다. 
 
 
