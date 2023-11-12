@@ -1,5 +1,5 @@
 const items = [
-    { id: 20, name: 'Book "item the Silk Road"', detail: 'The book is about my 8-month item trip across 14 countries. The price is including shipping fee within Switzerland', time: 'upto 3 delivery days', price: 45, imgSrc: '/assets/images/cycling.jpg'},
+    { id: 20, name: 'Book "Cycle the Silk Road"', detail: 'The book is about my 8-month item trip across 14 countries. The price is including shipping fee within Switzerland', time: 'upto 3 delivery days', price: 45, imgSrc: '/assets/images/cycling.jpg'},
   { id: 21, name: 'Plan your item trip', detail: 'I can share tips for Eurasia route', time: '1 hour', price: 100, imgSrc: '/assets/images/route.png' },
   { id: 22, name: 'How to find sponsors', detail: 'I can tell you how I got 20,000 EUR sponsorship from 13 companies', time: '1 hour', price: 100, imgSrc: '/assets/images/sponsor.jpeg' },
   { id: 23, name: 'How to train yourself', detail: 'I trained myself in 3 months', time: '30 minutes', price: 30, imgSrc: '/assets/images/train.jpeg' },

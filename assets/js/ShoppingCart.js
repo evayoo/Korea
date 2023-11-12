@@ -1,6 +1,6 @@
 // Function to create a cart item element . object of itemhandleQuantityChange
 let checkedItems = [];
-const quantity = 1;
+let quantity = 1;
 const cart = document.getElementById("cart");
 let listOFId = JSON.parse(localStorage.getItem("cartItemIds"));
 
@@ -333,7 +333,6 @@ let items = [
   },
 ];
 
-// add
 
 let cartItemIds = removeDupl(listOFId);
 function removeDupl(arr) {
@@ -343,14 +342,9 @@ function removeDupl(arr) {
 }
 
 function ShoppingCart({ items, cartItems }) {
-  // let checkedItems = [];
-  // let checkedItems = cartItems.map(function (el) {
-  //   return el;
-  // });
   let cart = document.getElementById("cart");
 
   function handleCheckChange(checked, id) {
-    console.log("hi");
     if (checked) {
       checkedItems = [...checkedItems, id];
     } else {
@@ -360,11 +354,7 @@ function ShoppingCart({ items, cartItems }) {
     }
     renderCart();
     updateOrderSummary();
-    // Update UI or trigger a re-render if needed
-    // calculate the total amount and total quantity
-    // then print it to the screen
-    // make this code ..
-
+  
     console.log("Checked Items:", checkedItems);
   }
 
@@ -376,8 +366,7 @@ function ShoppingCart({ items, cartItems }) {
     } else {
       checkedItems = [];
     }
-    // I need to Update UI or trigger a re-render for handleAllCheck, handleQuantityChange, handleDelete, getTotal
-    console.log("Checked Items:", checkedItems);
+     console.log("Checked Items:", checkedItems);
     renderCart();
     updateOrderSummary();
   }
@@ -556,17 +545,20 @@ cartItemIds.forEach((idFromLocalStorage) => {
 function updateOrderSummary(amount) {
   const quantityElement = document.getElementById("totalQty");
   const amountElement = document.getElementById("totalAmount");
-  console.log(checkedItems.length, "hi");
   if (quantityElement && amountElement) {
+//loop throgh the checkedItems with almount of each item
+// let SUM = ///////
+
     quantityElement.textContent = checkedItems.length + " Items";
     amountElement.textContent = sum() + " CHF";
-    console.log("hi you");
+    console.table(checkedItems, "checkedItems")
   }
 
   function sum() {
     let totalprice = 0;
+
     for (i = 0; i < checkedItems.length; i++) {
-      totalprice += items.find((item) => item.id === checkedItems[i]).price;
+      totalprice += items.find((item) => item.id === checkedItems[i]).price;// multiply by quantity
       
     } return totalprice;
   }

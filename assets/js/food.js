@@ -50,7 +50,7 @@ for (let i = 0; i < clickElements.length; i++) {
         // Get the ID of the item associated with the clicked "Add to cart" button
         const itemId = items[i].id;
 
-        // Add the item ID to local storage (you can customize the key and storage logic)
+        // Add the item ID to local storage
         localStorage.setItem('cartItemIds', JSON.stringify([...getCartItemIdsFromStorage(), itemId]));
     });
 
