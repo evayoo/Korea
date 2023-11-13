@@ -348,6 +348,7 @@ function ShoppingCart({ items, cartItems }) {
     if (checked) {
       checkedItems = [...checkedItems, id];
     } else {
+
       checkedItems = checkedItems.filter(function (el) {
         return el !== id;
       });
@@ -523,18 +524,17 @@ function ShoppingCart({ items, cartItems }) {
 
 const shoppingCart = ShoppingCart({ items, cartItems: cartItemIds });
 
-cartItemIds.forEach((idFromLocalStorage) => {
-  items.forEach((service) => {
-    if (service.id === idFromLocalStorage) {
-      let cartItem = shoppingCart.createCartItemElement(
-        service,
-        shoppingCart.checkedItems,
-        quantity
-      );
-      cart.appendChild(cartItem);
-    }
-  });
-});
+// cartItemIds.forEach((idFromLocalStorage) => {
+//   items.forEach((service) => {
+//     if (service.id === idFromLocalStorage) {
+//       let cartItem = shoppingCart.createCartItemElement(
+//         service,
+//         shoppingCart.checkedItems,
+//         quantity
+//       );
+//     }
+//   });
+// });
 
 // instead of this, get shoppingcart.renderditems fdor E
 // drender item > if dthis idtem, create cart item element, just with 10%of dthe code.
