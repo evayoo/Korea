@@ -361,9 +361,7 @@ function ShoppingCart({ items, cartItems }) {
 
   function handleAllCheck(checked) {
     if (checked) {
-      checkedItems = cartItems.map(function (el) {
-        return el.itemId;
-      });
+      checkedItems = [...cartItemIds];
     } else {
       checkedItems = [];
     }
@@ -424,6 +422,15 @@ function ShoppingCart({ items, cartItems }) {
       handleCheckChange(e.target.checked, item.id);
     });
     checkbox.checked = checkedItems.includes(item.id);
+
+    const selectAllCheckbox = document.querySelector("#selectAllCheckbox");
+    selectAllCheckbox.type = "checkbox";
+    selectAllCheckbox.addEventListener("change", function (event) {
+      
+      handleAllCheck(event.target.checked, item.id);
+      
+    });
+   
 
     const thumbnail = document.createElement("div");
     thumbnail.className = "cart-item-thumbnail";
@@ -535,12 +542,6 @@ const shoppingCart = ShoppingCart({ items, cartItems: cartItemIds });
 //     }
 //   });
 // });
-
-// instead of this, get shoppingcart.renderditems fdor E
-// drender item > if dthis idtem, create cart item element, just with 10%of dthe code.
-// it should be 4 lines.
-// cartDItem should be called with one para
-// you need just 1 line !
 
 function updateOrderSummary(amount) {
   const quantityElement = document.getElementById("totalQty");
