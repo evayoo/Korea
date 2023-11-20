@@ -38,6 +38,13 @@ items.forEach(function (item) {
 let clickElements = document.getElementsByClassName('item-photo');
 let targetElements = document.getElementsByClassName('info');
 let addToCartButtons = document.getElementsByClassName('item-button');
+function showSnackbar() {
+    var snackbar = document.getElementById("snackbar");
+    snackbar.className = "show";
+    setTimeout(function() {
+      snackbar.className = snackbar.className.replace("show", "");
+    }, 3000); // 3000 milliseconds = 3 seconds
+  }
 
 for (let i = 0; i < clickElements.length; i++) {
     clickElements[i].addEventListener('click', function () {
@@ -52,12 +59,17 @@ for (let i = 0; i < clickElements.length; i++) {
 
         // Add the item ID to local storage
         localStorage.setItem('cartItemIds', JSON.stringify([...getCartItemIdsFromStorage(), itemId]));
+    
+        // show the snack bar when the number comes in. 
+        showSnackbar();
     });
 
     clickElements[i].addEventListener('mouseout', function () {
         clickElements[i].src = items[i].imgSrc;
     });
 }
+
+
 
 function hideAllExcept(index) {
     for (let i = 0; i < clickElements.length; i++) {
@@ -74,3 +86,5 @@ function getCartItemIdsFromStorage() {
     const cartItemIds = localStorage.getItem('cartItemIds');
     return cartItemIds ? JSON.parse(cartItemIds) : [];
 }
+
+

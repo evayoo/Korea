@@ -129,6 +129,8 @@
   .order-summary-text{
     float: right;
   }
+
+
   
   #shopping-cart-select-all{
     padding-left: 10px;
@@ -207,7 +209,7 @@
     padding: 0.3rem;
     text-align: center;
     color: #4000c7;
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
     margin-left: 1.9rem;
     cursor: pointer;
   }
