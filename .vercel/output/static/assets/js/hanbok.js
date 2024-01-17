@@ -1,8 +1,8 @@
 const items = [
-    { id: 24, name: 'Modern item', price: 50, imgSrc: '/assets/images/modern.jpeg'},
-    { id: 25, name: 'Summer item', price: 40, imgSrc: '/assets/images/dress.jpeg' },
+    { id: 24, name: 'Modern Hanbok', price: 50, imgSrc: '/assets/images/modern.jpeg'},
+    { id: 25, name: 'Summer Hanbok', price: 40, imgSrc: '/assets/images/dress.jpeg' },
     { id: 26, name: 'Summer blouse', price: 30, imgSrc: '/assets/images/blouse.jpeg' },
-    { id: 27, name: 'Couple item', price: 100, imgSrc: '/assets/images/hanbok3.jpg' },
+    { id: 27, name: 'Couple Hanbok', price: 100, imgSrc: '/assets/images/hanbok3.jpg' },
     ];
 
 const itemContainer = document.getElementById('item-container');
