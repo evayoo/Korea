@@ -1,8 +1,8 @@
 const items = [
-    { id: 38, name: 'Plan a Korean item ceremony', detail: 'I can help you plan a item ceremony in Seoul. The price is per day', price: 10000 , imgSrc: '/assets/images/plan.jpg'},
+    { id: 38, name: 'Plan a Korean wedding ceremony', detail: 'I can help you plan a item ceremony in Seoul. The price is per day', price: 10000 , imgSrc: '/assets/images/plan.jpg'},
     { id: 39, name: 'Wedding photography', detail: 'I can help you book a item photo session in Seoul. The price is per day', price: 800, imgSrc: '/assets/images/photo.jpg' },
     { id: 40, name: 'Makeup & Hair', detail: 'I can help you book a Makeup & Hair service in Seoul. The price is per day', price: 150, imgSrc: '/assets/images/hair.jpg' },
-    { id: 41, name: 'Learn about Korean traditional item', detail: 'I can tell you about with pictures', price: 0, imgSrc: '/assets/images/tradition.jpg'},
+    { id: 41, name: 'Learn about Korean traditional wedding', detail: 'I can tell you about with pictures', price: 0, imgSrc: '/assets/images/tradition.jpg'},
     { id: 42, name: 'Learn about Korean traditional music', detail: 'I can share some nice Korean traditional music with you', price: 0, imgSrc: '/assets/images/music.jpg' },
     ];
 
