@@ -43,6 +43,8 @@
     .item-wrap {
         height: 150px;
         width: 120px;
+        align-items: center;
+        justify-content: center;
     }
     .info {
         margin-left: 10px;
