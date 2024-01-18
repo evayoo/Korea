@@ -181,6 +181,14 @@ body {
     background-image: url(/assets/images/modern.jpeg);
   }
 
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 1em;
+      grid-row-gap: 100px;
+    }
+  }
 /*.header,
 .footer {
   background-color: #999;
