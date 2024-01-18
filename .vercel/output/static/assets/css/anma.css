@@ -42,7 +42,7 @@
 @media (max-width: 768px) {
     .item-wrap {
         display: grid;
-        grid-template-columns: 120px;
+        grid-template-columns: 0.5fr;
         padding: 0.5em;
         grid-row-gap: 20px;
         /* height: 200px;
