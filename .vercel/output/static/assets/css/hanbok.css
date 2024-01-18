@@ -26,16 +26,14 @@
 
 /* Responsive settings */
 @media (max-width: 992px) {
-    .item
--wrap {
+    .item-wrap {
         height: 200px;
         width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .item
--wrap {
+    .item-wrap {
         height: 150px;
         width: 120px;
     }

@@ -7,9 +7,9 @@ main {
 }
 
 main img {
-    padding: 2%;
+    padding: 10%;
     height: 300px;
-    width: 300px;
+    width: 350px;
     border-radius: 7px;
     object-fit: cover;
 }
