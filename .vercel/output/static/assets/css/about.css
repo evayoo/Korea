@@ -8,7 +8,7 @@ main {
 
 main img {
     padding: 5%;
-    height: 1fr;
+    height: 300px;
     width: 1fr;
     border-radius: 7px;
     object-fit: cover;
