@@ -1,5 +1,5 @@
 main {
-    padding: 10%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,9 +7,9 @@ main {
 }
 
 main img {
-    padding: 10%;
-    height: 300px;
-    width: 300px;
+    padding: 5%;
+    height: 1fr;
+    width: 1fr;
     border-radius: 7px;
     object-fit: cover;
 }
