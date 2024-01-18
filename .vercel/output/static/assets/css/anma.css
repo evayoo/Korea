@@ -43,8 +43,6 @@
     .item-wrap {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1em;
-        grid-row-gap: 100px;
         height: 200px;
         width: 120px;
     }
